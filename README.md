@@ -1,4 +1,3 @@
-<!DOCTYPE html>
 <html lang="pl">
 <head>
     <meta charset="UTF-8">
@@ -56,7 +55,7 @@
         .employee-list {
             width: 150%;
             border-collapse: collapse;
-            margin-top: 20px;
+            margin-top: 30px;
             font-size: 18px; /* Dwukrotne zwiększenie rozmiaru */
             box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
         }
