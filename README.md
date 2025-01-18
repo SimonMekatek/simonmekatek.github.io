@@ -1,5 +1,3 @@
-# Department of Justice - Kartoteka pracowników
-
 <!DOCTYPE html>
 <html lang="pl">
 <head>
@@ -9,92 +7,103 @@
     <style>
         body {
             font-family: 'Arial', sans-serif;
-            background-color: #f9f9f9;
+            background-color: #F3F6FB;
             margin: 0;
             padding: 0;
             color: #333;
         }
 
         .container {
-            max-width: 1200px;
+            width: 100%;
+            max-width: 1300px;
             margin: 0 auto;
-            padding: 20px;
+            padding: 40px 20px;
+            box-sizing: border-box;
         }
 
         .header {
             text-align: center;
-            padding: 20px;
+            padding: 30px 40px;
             background-color: #4A90E2;
             color: white;
-            border-radius: 10px;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            border-radius: 12px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+            margin-bottom: 40px;
         }
 
         .header h1 {
             margin: 0;
-            font-size: 36px;
+            font-size: 38px;
             font-weight: 600;
         }
 
         .add-button {
-            padding: 10px 20px;
-            background-color: #4A90E2;
+            padding: 12px 24px;
+            background-color: #57A6E8;
             color: white;
             border: none;
-            border-radius: 5px;
+            border-radius: 8px;
             font-size: 18px;
             cursor: pointer;
             text-decoration: none;
-            transition: background-color 0.3s ease;
+            box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
+            transition: background-color 0.3s ease, box-shadow 0.3s ease;
         }
 
         .add-button:hover {
-            background-color: #357ab7;
+            background-color: #4092c9;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
         }
 
         .employee-list {
-            margin-top: 40px;
             width: 100%;
             border-collapse: collapse;
+            margin-top: 40px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
         }
 
         .employee-list th, .employee-list td {
-            padding: 12px;
+            padding: 18px 24px;
             text-align: center;
-            border: 1px solid #ddd;
+            border: 1px solid #E0E0E0;
+            font-size: 16px;
         }
 
         .employee-list th {
             background-color: #4A90E2;
             color: white;
+            font-size: 18px;
         }
 
         .employee-list td {
-            background-color: #ffffff;
+            background-color: #FFFFFF;
+            font-size: 16px;
+            color: #555;
         }
 
         .remove-button {
-            padding: 5px 10px;
-            background-color: #e74c3c;
+            padding: 8px 16px;
+            background-color: #E74C3C;
             color: white;
             border: none;
             border-radius: 5px;
             cursor: pointer;
-            transition: background-color 0.3s ease;
+            transition: background-color 0.3s ease, transform 0.2s ease;
         }
 
         .remove-button:hover {
-            background-color: #c0392b;
+            background-color: #C0392B;
+            transform: scale(1.05);
         }
 
         .pencil-icon {
             cursor: pointer;
-            color: #f39c12;
+            color: #F39C12;
             font-size: 20px;
         }
 
         .pencil-icon:hover {
-            color: #e67e22;
+            color: #E67E22;
         }
 
         .modal, .overlay {
@@ -111,39 +120,61 @@
 
         .modal-content {
             background-color: white;
-            padding: 20px;
-            border-radius: 8px;
-            width: 400px;
-            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+            padding: 40px;
+            border-radius: 12px;
+            width: 500px;
+            max-width: 90%;
+            box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
+            text-align: center;
         }
 
         .modal-header {
-            text-align: center;
-            margin-bottom: 20px;
+            margin-bottom: 30px;
         }
 
         .modal-input {
             width: 100%;
-            padding: 10px;
-            margin: 10px 0;
+            padding: 14px;
+            margin: 12px 0;
             border: 1px solid #ddd;
-            border-radius: 5px;
+            border-radius: 8px;
+            font-size: 16px;
+            background-color: #FAFAFA;
         }
 
         .modal-button {
-            padding: 10px 20px;
+            padding: 14px 28px;
             background-color: #4A90E2;
             color: white;
             border: none;
-            border-radius: 5px;
+            border-radius: 8px;
             cursor: pointer;
-            font-size: 16px;
+            font-size: 18px;
             width: 100%;
+            transition: background-color 0.3s ease;
         }
 
         .modal-button:hover {
             background-color: #357ab7;
         }
+
+        @media (max-width: 768px) {
+            .employee-list th, .employee-list td {
+                font-size: 14px;
+                padding: 12px 16px;
+            }
+
+            .add-button {
+                font-size: 16px;
+                padding: 10px 20px;
+            }
+
+            .modal-content {
+                width: 90%;
+                padding: 20px;
+            }
+        }
+
     </style>
 </head>
 <body>
