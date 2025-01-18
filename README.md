@@ -61,7 +61,7 @@
         }
 
         .employee-list th, .employee-list td {
-            padding: 30px; /* Większa przestrzeń w komórkach */
+            padding: 50px; /* Większa przestrzeń w komórkach */
             text-align: center;
             border: 3px solid #4A90E2; /* Grubsze linie między wierszami */
         }
