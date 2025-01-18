@@ -57,21 +57,34 @@
             width: 100%;
             border-collapse: collapse;
             margin-top: 20px;
+            font-size: 18px; /* Dwukrotne zwiększenie rozmiaru */
+            border: 2px solid #4A90E2; /* Grubsza obramowanie */
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
         }
 
         .employee-list th, .employee-list td {
-            padding: 10px 20px;
+            padding: 20px; /* Większa przestrzeń w komórkach */
             text-align: center;
-            border: 1px solid #E0E0E0;
+            border: 2px solid #4A90E2; /* Grubsze linie między wierszami */
         }
 
         .employee-list th {
             background-color: #4A90E2;
             color: white;
+            font-weight: bold;
+        }
+
+        .employee-list td {
+            background-color: #FFF;
+            transition: background-color 0.3s ease;
+        }
+
+        .employee-list tr:hover td {
+            background-color: #EAF4FF; /* Efekt hover na wierszach */
         }
 
         .remove-button {
-            padding: 8px 16px;
+            padding: 10px 20px;
             background-color: #E74C3C;
             color: white;
             border: none;
@@ -90,7 +103,7 @@
         }
 
         .overlay, .modal {
-            display: none; /* Ukryte domyślnie */
+            display: none;
             justify-content: center;
             align-items: center;
             position: fixed;
