@@ -57,7 +57,7 @@
             width: 150%;
             border-collapse: collapse;
             margin-top: 20px;
-            font-size: 25px; /* Dwukrotne zwiększenie rozmiaru */
+            font-size: 18px; /* Dwukrotne zwiększenie rozmiaru */
             box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
         }
 
