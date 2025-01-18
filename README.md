@@ -4,9 +4,11 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Spis Pracowników</title>
+    <!-- Załadowanie czcionki Poppins z Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500&display=swap" rel="stylesheet">
     <style>
         body {
-            font-family: 'Arial', sans-serif;
+            font-family: 'Poppins', sans-serif;
             background-color: #F3F6FB;
             margin: 0;
             padding: 0;
@@ -33,7 +35,7 @@
 
         .header h1 {
             margin: 0;
-            font-size: 38px;
+            font-size: 36px;
             font-weight: 600;
         }
 
@@ -60,24 +62,26 @@
             border-collapse: collapse;
             margin-top: 40px;
             box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+            border-radius: 12px;
+            overflow: hidden;
         }
 
         .employee-list th, .employee-list td {
-            padding: 18px 24px;
+            padding: 15px 20px;
             text-align: center;
             border: 1px solid #E0E0E0;
-            font-size: 16px;
+            font-size: 14px;
         }
 
         .employee-list th {
             background-color: #4A90E2;
             color: white;
-            font-size: 18px;
+            font-size: 16px;
         }
 
         .employee-list td {
             background-color: #FFFFFF;
-            font-size: 16px;
+            font-size: 14px;
             color: #555;
         }
 
@@ -96,14 +100,14 @@
             transform: scale(1.05);
         }
 
-        .pencil-icon {
+        .status-clickable {
+            color: #4A90E2;
+            font-weight: bold;
             cursor: pointer;
-            color: #F39C12;
-            font-size: 20px;
         }
 
-        .pencil-icon:hover {
-            color: #E67E22;
+        .status-clickable:hover {
+            text-decoration: underline;
         }
 
         .modal, .overlay {
@@ -160,8 +164,8 @@
 
         @media (max-width: 768px) {
             .employee-list th, .employee-list td {
-                font-size: 14px;
-                padding: 12px 16px;
+                font-size: 12px;
+                padding: 10px 15px;
             }
 
             .add-button {
@@ -246,8 +250,7 @@
                     <td>${employee.ssn}</td>
                     <td>${employee.discord}</td>
                     <td>
-                        <span id="workStatus-${index}">${employee.works}</span>
-                        <span class="pencil-icon" onclick="openChangeStatusModal(${index})">&#9998;</span>
+                        <span id="workStatus-${index}" class="status-clickable" onclick="openChangeStatusModal(${index})">${employee.works}</span>
                     </td>
                     <td><button class="remove-button" onclick="removeEmployee(${index})">Usuń</button></td>
                 `;
