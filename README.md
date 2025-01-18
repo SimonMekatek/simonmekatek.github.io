@@ -55,13 +55,13 @@
         .employee-list {
             width: 150%;
             border-collapse: collapse;
-            margin-top: 30px;
+            margin-top: 60px;
             font-size: 18px; /* Dwukrotne zwiększenie rozmiaru */
             box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
         }
 
         .employee-list th, .employee-list td {
-            padding: 50px; /* Większa przestrzeń w komórkach */
+            padding: 30px; /* Większa przestrzeń w komórkach */
             text-align: center;
             border: 3px solid #4A90E2; /* Grubsze linie między wierszami */
         }
