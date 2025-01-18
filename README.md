@@ -54,18 +54,17 @@
         }
 
         .employee-list {
-            width: 100%;
+            width: 150%;
             border-collapse: collapse;
             margin-top: 20px;
-            font-size: 18px; /* Dwukrotne zwiększenie rozmiaru */
-            border: 2px solid #4A90E2; /* Grubsza obramowanie */
+            font-size: 12px; /* Dwukrotne zwiększenie rozmiaru */
             box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
         }
 
         .employee-list th, .employee-list td {
-            padding: 20px; /* Większa przestrzeń w komórkach */
+            padding: 30px; /* Większa przestrzeń w komórkach */
             text-align: center;
-            border: 2px solid #4A90E2; /* Grubsze linie między wierszami */
+            border: 3px solid #4A90E2; /* Grubsze linie między wierszami */
         }
 
         .employee-list th {
