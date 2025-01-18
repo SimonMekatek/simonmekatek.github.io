@@ -179,6 +179,25 @@
             }
         }
 
+        /* Tabela rozszerzona na pełną szerokość */
+        .employee-list {
+            width: 100%;
+        }
+
+        /* Wyśrodkowanie modali */
+        .modal-content {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        /* Zwiększenie szerokości strony */
+        body {
+            width: 100%;
+            min-height: 100vh;
+            background-color: #f3f6fb;
+        }
+
     </style>
 </head>
 <body>
