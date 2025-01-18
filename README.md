@@ -13,11 +13,14 @@
             margin: 0;
             padding: 0;
             color: #333;
+            width: 100%;
+            min-height: 100vh;
+            overflow-x: hidden;
         }
 
         .container {
             width: 100%;
-            max-width: 1300px;
+            max-width: 90%;
             margin: 0 auto;
             padding: 40px 20px;
             box-sizing: border-box;
@@ -31,6 +34,7 @@
             border-radius: 12px;
             box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
             margin-bottom: 40px;
+            width: 100%;
         }
 
         .header h1 {
@@ -110,26 +114,26 @@
             text-decoration: underline;
         }
 
-        .modal, .overlay {
-            display: none;
+        .overlay, .modal {
+            display: flex;
+            justify-content: center;
+            align-items: center;
             position: fixed;
             top: 0;
             left: 0;
             width: 100%;
             height: 100%;
             background-color: rgba(0, 0, 0, 0.5);
-            justify-content: center;
-            align-items: center;
+            z-index: 999;
         }
 
         .modal-content {
             background-color: white;
             padding: 40px;
             border-radius: 12px;
-            width: 500px;
+            width: 600px;
             max-width: 90%;
             box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
-            text-align: center;
         }
 
         .modal-header {
@@ -178,26 +182,6 @@
                 padding: 20px;
             }
         }
-
-        /* Tabela rozszerzona na pełną szerokość */
-        .employee-list {
-            width: 100%;
-        }
-
-        /* Wyśrodkowanie modali */
-        .modal-content {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-        }
-
-        /* Zwiększenie szerokości strony */
-        body {
-            width: 100%;
-            min-height: 100vh;
-            background-color: #f3f6fb;
-        }
-
     </style>
 </head>
 <body>
